@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathan R | Java Full Stack Developer - Holographic Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Three.js Canvas for 3D Background -->
+  <canvas id="holographic-canvas"></canvas>
+
+  <!-- Holographic Dashboard Container -->
+  <div class="dashboard-container">
+    
+    <!-- Header with Navigation -->
+    <header class="holographic-header">
+      <div class="header-content">
+        <div class="logo-text">
+          <span class="glow-text cyan-glow">MATHAN R</span>
+          <span class="subtitle-text">JAVA FULL STACK DEVELOPER</span>
+        </div>
+        <nav class="floating-nav">
+          <a href="#experience" class="nav-link neon-link">EXPERIENCE</a>
+          <a href="#projects" class="nav-link neon-link">PROJECTS</a>
+          <a href="#resume" class="nav-link neon-link">RESUME</a>
+          <a href="#contacts" class="nav-link neon-link">CONTACTS</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Central Holographic Panel -->
+    <div class="central-panel floating-panel">
+      <div class="panel-content">
+        <div class="avatar-section">
+          <div class="avatar-container">
+            <svg class="developer-avatar" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- Avatar head -->
+              <circle cx="50" cy="35" r="18" fill="none" stroke="#00ff41" stroke-width="1.5" class="avatar-glow"/>
+              <circle cx="50" cy="35" r="16" fill="url(#avatarGradient)"/>
+              
+              <!-- Beard -->
+              <path d="M 35 42 Q 50 48 65 42" fill="none" stroke="#1a3a1a" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 35 43 Q 50 49 65 43" fill="none" stroke="#00ff41" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              
+              <!-- Eyes -->
+              <circle cx="43" cy="32" r="2" fill="#00ff41"/>
+              <circle cx="57" cy="32" r="2" fill="#00ff41"/>
+              
+              <!-- Shoulders/Body -->
+              <rect x="30" y="52" width="40" height="35" rx="8" fill="url(#bodyGradient)"/>
+              
+              <!-- Glow layers -->
+              <circle cx="50" cy="35" r="20" fill="none" stroke="#00ff41" stroke-width="0.5" opacity="0.4" class="pulse-glow"/>
+              <circle cx="50" cy="35" r="22" fill="none" stroke="#00f2fe" stroke-width="0.5" opacity="0.2"/>
+              
+              <defs>
+                <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1a2a3a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0f1f2f;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1a3a2a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0f2a1f;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <div class="welcome-text-section">
+          <h1 class="welcome-title glitch-text">WELCOME TO THE MATRIX</h1>
+          <h2 class="main-heading green-glow">I AM MATHAN</h2>
+          <p class="tagline cyan-glow-text">Java Full Stack Developer | Spring Boot & React.js</p>
+          <p class="credential-badge">
+            <i class="fas fa-graduation-cap"></i> BCA Graduate | 
+            <i class="fas fa-certificate"></i> QSpiders Certified | MySQL, Maven, Git
+          </p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mathan-rajalingam-1999rm" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Mathan2504" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://portfolio-eobv.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-link" title="Portfolio">
+              <i class="fas fa-globe"></i>
+            </a>
+            <a href="https://employee-management-system-project-eta.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-link" title="Featured Project">
+              <i class="fas fa-project-diagram"></i>
+            </a>
+            <a href="./Mathan_Java_Full_Stack_Resume.pdf" download class="social-link" title="Download Resume">
+              <i class="fas fa-file-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating code snippets around central panel -->
+      <div class="floating-code" style="top: -15px; left: 10px;">
+        <pre><span class="code-keyword">class</span> Employee {<br><span class="code-type">  List</span> skills;</pre>
+      </div>
+      <div class="floating-code" style="bottom: -20px; right: 15px;">
+        <pre><span class="code-keyword">const</span> API_URL = <br><span class="code-string">'api/v1/...'</span></pre>
+      </div>
+    </div>
+
+    <!-- SQL Query Interface (moved into resume overview) -->
+
+    <!-- Data Vortex Effect (Bottom Left) -->
+    <div class="data-vortex"></div>
+
+    <!-- Circuit Board Ground Grid -->
+    <div class="circuit-grid"></div>
+
+    <!-- Floating Code Elements -->
+    <div class="floating-elements">
+      <span class="code-bracket">{</span>
+      <span class="code-bracket" style="top: 25%; right: 8%;">}</span>
+      <span class="code-bracket" style="bottom: 30%; left: 5%;">[]</span>
+      <span class="data-packet"></span>
+      <span class="data-packet" style="top: 40%; right: 20%; animation-delay: 0.5s;"></span>
+      <span class="network-node"></span>
+      <span class="network-node" style="bottom: 25%; left: 15%; animation-delay: 1s;"></span>
+    </div>
+
+  </div>
+
+  <section id="experience" class="resume-section experience-section">
+    <div class="resume-panel static-panel">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="section-grid">
+        <div class="detail-card">
+          <h3>Software Support & Systems Management</h3>
+          <p>Annai Stores, Chennai | June 2023 – May 2025</p>
+          <ul class="resume-list">
+            <li>Coordinated with external software vendors to maintain and optimize retail management systems.</li>
+            <li>Managed backend updates, data maintenance, and records provisioning to ensure high data integrity.</li>
+            <li>Performed system testing on software updates to identify and eliminate application bugs.</li>
+            <li>Handled issue logging, reporting, and real-time support for store staff.</li>
+          </ul>
+        </div>
+        <div class="detail-card">
+          <h3>Sales & Operations Management</h3>
+          <p>Annai Stores, Chennai | June 2019 – May 2025</p>
+          <ul class="resume-list">
+            <li>Managed wholesale grocery sales generating ₹15+ lakh monthly revenue across 80+ clients.</li>
+            <li>Processed 50+ daily orders with 99% billing accuracy while coordinating stock levels.</li>
+            <li>Maintained supplier and customer relationships to support on-time delivery and retention.</li>
+            <li>Trained junior staff on order processing, billing systems, and customer service.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="resume-section projects-section">
+    <div class="resume-panel static-panel">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-grid">
+        <div class="detail-card">
+          <h3>Full Stack Employee Management System</h3>
+          <p>Personal project built with React.js, Spring Boot, and MySQL using layered MVC architecture.</p>
+          <ul class="resume-list">
+            <li>Engineered 15+ CRUD REST APIs with ResponseEntity, global exception handling, and dynamic request mapping.</li>
+            <li>Implemented Spring Data JPA, Hibernate ORM, and optimized MySQL queries for relational entities.</li>
+            <li>Built responsive React UI with Hooks, Context API, Axios, and React Router for smooth frontend-backend integration.</li>
+            <li>Conducted JUnit and Postman testing, validated JSON responses, and configured CORS support.</li>
+            <li>Containerized the application using Docker for consistent local development and deployment.</li>
+          </ul>
+        </div>
+        <div class="detail-card project-highlight-card">
+          <h3>Employee Management System</h3>
+          <p class="project-short">A full-stack employee management web app using Spring Boot and React.js. Handles CRUD operations, authentication, and reporting.</p>
+          <div class="project-screenshot" aria-hidden="true">Screenshot</div>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Docker</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://employee-management-system-project-eta.vercel.app/" class="cta-button pulse-button" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-play-circle"></i> OPEN PROJECT
+            </a>
+            <!-- Resume link removed per user request -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume-section">
+    <div class="resume-panel static-panel">
+      <div class="resume-header">
+        <h2 class="section-title">Resume Overview</h2>
+        <a href="./Mathan_Java_Full_Stack_Resume.pdf" class="cta-button resume-download" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+      <div class="resume-content">
+        <div class="resume-column">
+          <h3>Professional Summary</h3>
+          <p>Results-driven Java Full Stack Developer with hands-on experience building RESTful web applications using Spring Boot and React.js. Experienced in backend updates, system testing, vendor coordination, and retail software operations.</p>
+
+          <h3>Technical Highlights</h3>
+          <ul class="resume-list">
+            <li>Java, Spring Boot, Hibernate, React.js</li>
+            <li>MySQL, Oracle SQL, REST APIs</li>
+            <li>HTML5, CSS3, Axios, React Router</li>
+            <li>JUnit, Postman, Maven, Git</li>
+          </ul>
+
+          <div class="tech-grid">
+            <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+            <div class="tech-item"><i class="fas fa-leaf"></i><span>Spring Boot</span></div>
+            <div class="tech-item"><i class="fab fa-react"></i><span>React.js</span></div>
+            <div class="tech-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+            <div class="tech-item"><i class="fas fa-plug"></i><span>REST APIs</span></div>
+            <div class="tech-item"><i class="fas fa-code"></i><span>JavaScript</span></div>
+            <div class="tech-item"><i class="fas fa-hammer"></i><span>Hibernate</span></div>
+            <div class="tech-item"><i class="fas fa-cogs"></i><span>Maven</span></div>
+            <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+          </div>
+        </div>
+        <div class="resume-column">
+
+          <h3>Education</h3>
+          <ul class="resume-list">
+            <li>BCA, Manonmaniam Sundaranar University</li>
+            <li>HSC, Manal Madha Higher Secondary School</li>
+            <li>SSLC, Manal Madha Higher Secondary School</li>
+          </ul>
+
+          <h3>Courses Completed</h3>
+          <ul class="resume-list">
+            <li>Java Full Stack Developer course at QSpiders Training and Testing Institute, Chennai (2025–2026, 10 months) — Java, Spring Boot, Oracle SQL, HTML, CSS, JavaScript, React</li>
+            <li>Advanced Java & Spring Boot</li>
+            <li>React.js Frontend Development</li>
+            <li>Database Design with MySQL</li>
+          </ul>
+
+          <div class="db-architecture">
+            <h3>Database Architecture</h3>
+            <div class="sql-display">
+              <pre class="sql-code"><span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> employees
+<span class="sql-keyword">JOIN</span> departments
+<span class="sql-keyword">WHERE</span> status = <span class="sql-string">'active'</span></pre>
+            </div>
+            <div class="entity-boxes">
+              <div class="entity-box">Employees</div>
+              <div class="entity-box">Departments</div>
+              <div class="entity-box">Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="resume-section contact-section">
+    <div class="resume-panel floating-panel static-panel">
+      <h2 class="section-title">Contacts</h2>
+      <p class="contact-text"><strong>Email:</strong> <a href="mailto:mathanrsm6596@gmail.com">mathanrsm6596@gmail.com</a></p>
+      <p class="contact-text"><strong>Phone:</strong> +91-6382008656</p>
+      <p class="contact-text"><strong>Location:</strong> Chennai, Tamil Nadu</p>
+      <p class="contact-text"><strong>Professional Links:</strong> <a href="https://www.linkedin.com/in/mathan-rajalingam-1999rm" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/Mathan2504" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://portfolio-eobv.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
+    </div>
+  </section>
+
+  <!-- Sparkle Container for Data Sparkles -->
+  <div class="sparkle-container"></div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <span class="pulse-dot"></span>
+    SCROLL TO EXPLORE
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.floating-nav a');
+
+      function onScroll() {
+        const fromTop = window.scrollY + 120;
+        navLinks.forEach(link => {
+          const selector = link.getAttribute('href');
+          if (!selector || !selector.startsWith('#')) return;
+          const section = document.querySelector(selector);
+          if (!section) return;
+          if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
+</body>
+</html>

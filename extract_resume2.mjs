@@ -1,0 +1,10 @@
+import fs from 'fs';
+import { PDFParse } from 'pdf-parse';
+const filePath = './public/Mathan_Java_Full_Stack_Resume.pdf';
+const dataBuffer = fs.readFileSync(filePath);
+const parser = new PDFParse({ data: dataBuffer });
+const textResult = await parser.getText();
+console.log('numpages', textResult.total);
+console.log('textStart');
+console.log(textResult.text);
+console.log('textEnd');
