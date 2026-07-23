@@ -1,30 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
-
-export default function Reveal({ as: Tag = 'div', className = '', children, ...rest }) {
-  const ref = useRef(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setInView(true)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.15 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
+export default function Footer() {
   return (
-    <Tag ref={ref} className={`reveal${inView ? ' in-view' : ''} ${className}`.trim()} {...rest}>
-      {children}
-    </Tag>
+    <footer className="footer">
+      <div className="container">
+        &copy; {new Date().getFullYear()} <strong>Mathan R</strong> — Java Full Stack Developer. Built with intent, one API at a time.
+      </div>
+    </footer>
   )
 }

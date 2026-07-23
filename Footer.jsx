@@ -1,32 +1,27 @@
 import Reveal from './Reveal.jsx'
 
-export default function Contact() {
+export default function Experience() {
   return (
-    <section id="contact">
+    <section id="experience">
       <div className="container">
-        <Reveal className="contact-panel">
-          <span className="eyebrow" style={{ justifyContent: 'center' }}>Get In Touch</span>
-          <h2>Let&apos;s build something together</h2>
-          <p>Open to entry-level and associate Java Full Stack Developer roles in Chennai.</p>
-          <div className="contact-methods">
-            <a href="mailto:mathanrsm6596@gmail.com" className="contact-method">
-              <i className="fas fa-envelope"></i> mathanrsm6596@gmail.com
-            </a>
-            <a href="tel:+916382008656" className="contact-method">
-              <i className="fas fa-phone"></i> +91-6382008656
-            </a>
+        <span className="eyebrow">Work Experience</span>
+        <Reveal as="h2" className="section-title">Where the discipline came from</Reveal>
+        <Reveal as="p" className="section-sub">
+          Six years of real-world systems and client work, now applied to software development.
+        </Reveal>
+
+        <Reveal className="exp-card">
+          <div className="exp-head">
+            <h3>Sales Executive &amp; Software Support Coordinator</h3>
+            <span className="exp-dates">Jun 2019 – May 2025</span>
           </div>
-          <div className="social-row">
-            <a href="https://www.linkedin.com/in/mathan-rajalingam-1999rm" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Mathan2504" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="https://banking-application-sigma.vercel.app" target="_blank" rel="noopener noreferrer" title="Live Project">
-              <i className="fas fa-rocket"></i>
-            </a>
-          </div>
+          <div className="exp-company">Annai Stores, Chennai</div>
+          <ul className="exp-list">
+            <li>Coordinated with software vendors on backend updates, data maintenance, and store-management-system upgrades — the same debugging and requirements-gathering muscle now applied to full stack development.</li>
+            <li>Tested system updates, identified and logged application issues, and streamlined technical support and reporting processes.</li>
+            <li>Managed ₹15+ lakh in monthly wholesale revenue across 80+ client accounts with 99% billing accuracy on 50+ daily orders.</li>
+            <li>Built and maintained relationships with 30+ suppliers and 80+ customers; trained junior staff on billing systems and process.</li>
+          </ul>
         </Reveal>
       </div>
     </section>

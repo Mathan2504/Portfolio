@@ -1,40 +1,33 @@
 import Reveal from './Reveal.jsx'
 
-const items = [
-  {
-    icon: 'fas fa-laptop-code',
-    title: 'Java Full Stack Developer Training',
-    org: 'QSpiders Software Training Institute, Chennai',
-    meta: '2025 – 2026',
-  },
-  {
-    icon: 'fas fa-graduation-cap',
-    title: 'Bachelor of Computer Applications (BCA)',
-    org: 'Manonmaniam Sundaranar University',
-    meta: '70% · 2016 – 2019',
-  },
-]
-
-export default function Education() {
+export default function Contact() {
   return (
-    <section id="education">
+    <section id="contact">
       <div className="container">
-        <span className="eyebrow">Training &amp; Education</span>
-        <Reveal as="h2" className="section-title">Foundation</Reveal>
-        <Reveal as="p" className="section-sub">
-          Formal education paired with intensive, project-based full stack training.
+        <Reveal className="contact-panel">
+          <span className="eyebrow" style={{ justifyContent: 'center' }}>Get In Touch</span>
+          <h2>Let&apos;s build something together</h2>
+          <p>Open to entry-level and associate Java Full Stack Developer roles in Chennai.</p>
+          <div className="contact-methods">
+            <a href="mailto:mathanrsm6596@gmail.com" className="contact-method">
+              <i className="fas fa-envelope"></i> mathanrsm6596@gmail.com
+            </a>
+            <a href="tel:+916382008656" className="contact-method">
+              <i className="fas fa-phone"></i> +91-6382008656
+            </a>
+          </div>
+          <div className="social-row">
+            <a href="https://www.linkedin.com/in/mathan-rajalingam-1999rm" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Mathan2504" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://banking-application-sigma.vercel.app" target="_blank" rel="noopener noreferrer" title="Live Project">
+              <i className="fas fa-rocket"></i>
+            </a>
+          </div>
         </Reveal>
-
-        <div className="edu-grid">
-          {items.map((it) => (
-            <Reveal className="edu-card" key={it.title}>
-              <div className="edu-icon"><i className={it.icon}></i></div>
-              <h4>{it.title}</h4>
-              <div className="edu-org">{it.org}</div>
-              <div className="edu-meta">{it.meta}</div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   )

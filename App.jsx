@@ -1,52 +1,59 @@
-import Reveal from './Reveal.jsx'
+import { useEffect, useState } from 'react'
 
-const highlights = [
-  {
-    icon: 'fas fa-server',
-    title: 'Backend-first mindset',
-    text: 'Years of debugging live retail systems translate directly into disciplined API design and exception handling.',
-  },
-  {
-    icon: 'fas fa-people-arrows',
-    title: 'Vendor & client coordination',
-    text: 'Comfortable gathering requirements and communicating technical issues clearly to non-technical stakeholders.',
-  },
-  {
-    icon: 'fas fa-bolt',
-    title: 'Fast, structured learner',
-    text: 'Completed an intensive full stack curriculum while shipping two production-style projects in parallel.',
-  },
+const links = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#education', label: 'Education' },
+  { href: '#contact', label: 'Contact' },
 ]
 
-export default function About() {
-  return (
-    <section id="about">
-      <div className="container">
-        <span className="eyebrow">About</span>
-        <Reveal as="h2" className="section-title">From systems support to shipping full stack apps</Reveal>
-        <Reveal as="p" className="section-sub">
-          The short version of how six years on the ground floor of retail operations turned into a full stack career.
-        </Reveal>
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('')
 
-        <div className="about-grid">
-          <Reveal className="about-text">
-            <p>Java Full Stack Developer with hands-on, project-proven experience building RESTful web applications using Spring Boot, Hibernate/JPA, and React.js. Trained intensively at QSpiders across the full Java Full Stack curriculum, and backed by 6 years of professional experience in software support, backend coordination, and systems testing in a live retail-operations environment.</p>
-            <p>Comfortable across the stack — MVC architecture, REST API design, MySQL data modeling, JUnit testing, and Git/Maven-based workflows — with a track record of reliability, fast learning, and clear communication built through direct client and vendor coordination.</p>
-            <p>Currently looking for an entry-level / associate Java Full Stack Developer role in Chennai to apply and grow these skills within a product or services team.</p>
-          </Reveal>
-          <Reveal className="about-highlights">
-            {highlights.map((h) => (
-              <div className="highlight-card" key={h.title}>
-                <i className={h.icon}></i>
-                <div>
-                  <h4>{h.title}</h4>
-                  <p>{h.text}</p>
-                </div>
-              </div>
-            ))}
-          </Reveal>
+  useEffect(() => {
+    function onScroll() {
+      const fromTop = window.scrollY + 120
+      const sections = document.querySelectorAll('section[id], header[id]')
+      sections.forEach((sec) => {
+        if (sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop) {
+          setActive(sec.id)
+        }
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <nav className={`navbar${open ? ' open' : ''}`} id="navbar">
+      <div className="container">
+        <a href="#home" className="logo">Mathan<span className="dot">.</span>R</a>
+        <ul className="nav-links" id="navLinks">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className={active === link.href.slice(1) ? 'active' : ''}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="nav-cta">
+          <a href="/Mathan_R_Resume.pdf" download className="btn btn-outline btn-sm">
+            <i className="fas fa-download"></i> Resume
+          </a>
+          <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setOpen((o) => !o)}>
+            <i className="fas fa-bars"></i>
+          </button>
         </div>
       </div>
-    </section>
+    </nav>
   )
 }
